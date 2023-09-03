@@ -1,25 +1,56 @@
-// Version 0.3.6
+// Version 0.4.0
 
-let firstNumber;
-let secondNumber;
-let answerNumber;
-let plusminnus;
+let firstNumber="";
+let secondNumber="";
+let stage;
 let operator;
+
+// function
+
+function process() {
+    // directions for adding
+    if (operator === "plus") {
+      let num1 = parseFloat(firstNumber);
+      let num2 = parseFloat(secondNumber);
+      firstNumber = num1 + num2;
+      secondNumber = ""
+      document.getElementById("display").innerHTML = firstNumber;
+    }
+    // directions for subtracting
+    else if (operator === "minus") {
+      let num1 = parseFloat(firstNumber);
+      let num2 = parseFloat(secondNumber);
+      firstNumber = num1 - num2;
+      secondNumber = ""
+      document.getElementById("display").innerHTML = firstNumber;
+    }
+    // directions for multiplying
+    else if (operator === "multiply") {
+      let num1 = parseFloat(firstNumber);
+      let num2 = parseFloat(secondNumber);
+      firstNumber = num1 * num2;
+      secondNumber = ""
+      document.getElementById("display").innerHTML = firstNumber;
+    }
+    // directions for dividing
+    else if (operator === "divide") {
+      let num1 = parseFloat(firstNumber);
+      let num2 = parseFloat(secondNumber);
+      firstNumber = num1 / num2;
+      secondNumber = ""
+      document.getElementById("display").innerHTML = firstNumber;
+    }
+}
 
 // Number Selectors
 
+
 // One
 one.addEventListener("click", () => {
-  if (firstNumber === undefined) {
-    firstNumber = "1";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  if (stage != true) {
     firstNumber += "1";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
-    secondNumber = "1";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += "1";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -27,16 +58,10 @@ one.addEventListener("click", () => {
 
 // Two
 two.addEventListener("click", () => {
-  if (firstNumber === undefined) {
-    firstNumber = "2";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  if (stage != true) {
     firstNumber += "2";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
-    secondNumber = "2";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += "2";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -44,16 +69,10 @@ two.addEventListener("click", () => {
 
 // Three
 three.addEventListener("click", () => {
-  if (firstNumber === undefined) {
-    firstNumber = "3";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  if (stage != true) {
     firstNumber += "3";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
-    secondNumber = "3";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += "3";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -61,16 +80,10 @@ three.addEventListener("click", () => {
 
 // Four
 four.addEventListener("click", () => {
-  if (firstNumber === undefined) {
-    firstNumber = "4";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  if (stage != true) {
     firstNumber += "4";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
-    secondNumber = "4";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += "4";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -78,16 +91,10 @@ four.addEventListener("click", () => {
 
 // Five
 five.addEventListener("click", () => {
-  if (firstNumber === undefined) {
-    firstNumber = "5";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  if (stage != true) {
     firstNumber += "5";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
-    secondNumber = "5";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += "5";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -95,16 +102,10 @@ five.addEventListener("click", () => {
 
 // Six
 six.addEventListener("click", () => {
-  if (firstNumber === undefined) {
-    firstNumber = "6";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  if (stage != true) {
     firstNumber += "6";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
-    secondNumber = "6";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += "6";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -112,16 +113,10 @@ six.addEventListener("click", () => {
 
 // Seven
 seven.addEventListener("click", () => {
-  if (firstNumber === undefined) {
-    firstNumber = "7";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  if (stage != true) {
     firstNumber += "7";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
-    secondNumber = "7";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += "7";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -129,16 +124,10 @@ seven.addEventListener("click", () => {
 
 // Eight
 eight.addEventListener("click", () => {
-  if (firstNumber === undefined) {
-    firstNumber = "8";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  if (stage != true) {
     firstNumber += "8";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
-    secondNumber = "8";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += "8";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -146,16 +135,10 @@ eight.addEventListener("click", () => {
 
 // Nine
 nine.addEventListener("click", () => {
-  if (firstNumber === undefined) {
-    firstNumber = "9";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  if (stage != true) {
     firstNumber += "9";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
-    secondNumber = "9";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += "9";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -163,16 +146,10 @@ nine.addEventListener("click", () => {
 
 // Zero
 zero.addEventListener("click", () => {
-  if (firstNumber === undefined) {
-    firstNumber = "0";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  if (stage != true) {
     firstNumber += "0";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
-    secondNumber = "0";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += "0";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -180,16 +157,16 @@ zero.addEventListener("click", () => {
 
 // decimal
 decimal.addEventListener("click", ()=>{
-  if (firstNumber === undefined) {
+  if (firstNumber === "") {
     firstNumber = "0.";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (typeof firstNumber === "string" && plusminnus != "p") {
+  } else if (stage != true) {
     firstNumber += ".";
     document.getElementById("display").innerHTML = firstNumber;
-  } else if (plusminnus === "p" && secondNumber === undefined) {
+  } else if (stage === true && secondNumber === "") {
     secondNumber = "0.";
     document.getElementById("display").innerHTML = secondNumber;
-  } else if (typeof secondNumber === "string") {
+  } else if (stage === true) {
     secondNumber += ".";
     document.getElementById("display").innerHTML = secondNumber;
   }
@@ -199,59 +176,67 @@ decimal.addEventListener("click", ()=>{
 
 // Addition(+)
 plus.addEventListener("click", () => {
-  plusminnus = "p";
+  if (secondNumber != "") {
+    process()
+    operator = "plus";
+  }
+  else{
+  stage = true;
   operator = "plus";
+  }
 });
 
 // Subtraction(-)
 minus.addEventListener("click", () => {
-  plusminnus = "p";
+  if (secondNumber != "") {
+    process()
+    operator = "minus";
+  }
+  else{
+  stage = true;
   operator = "minus";
+  }
 });
 
 // Multiplication(×)
 multiply.addEventListener("click", () => {
-  plusminnus = "p";
+  if (secondNumber != "") {
+    process()
+    operator = "multiply";
+  }
+  else{
+  stage = true;
   operator = "multiply";
+  }
 });
 
 // Division(÷)
 divide.addEventListener("click", () => {
-  plusminnus = "p";
+  if (secondNumber != "") {
+    process()
+    operator = "divide";
+  }
+  else{
+  stage = true;
   operator = "divide";
+  }
 });
 
 // Display of Answer
 
-equal.addEventListener("click", () => {
-  // directions for adding
-  if (operator === "plus") {
-    let num1 = parseFloat(firstNumber);
-    let num2 = parseFloat(secondNumber);
-    answerNumber = num1 + num2;
-    document.getElementById("display").innerHTML = answerNumber;
-  }
-  // directions for subtracting
-  else if (operator === "minus") {
-    let num1 = parseFloat(firstNumber);
-    let num2 = parseFloat(secondNumber);
-    answerNumber = num1 - num2;
-    document.getElementById("display").innerHTML = answerNumber;
-  }
-  // directions for multiplying
-  else if (operator === "multiply") {
-    let num1 = parseFloat(firstNumber);
-    let num2 = parseFloat(secondNumber);
-    answerNumber = num1 * num2;
-    document.getElementById("display").innerHTML = answerNumber;
-  }
-  // directions for dividing
-  else if (operator === "divide") {
-    let num1 = parseFloat(firstNumber);
-    let num2 = parseFloat(secondNumber);
-    answerNumber = num1 / num2;
-    document.getElementById("display").innerHTML = answerNumber;
-  }
+equal.addEventListener("click", ()=>{
+  process();
 });
 
-//THE END
+// Clear Button 
+
+clear.addEventListener("click", () => {
+  firstNumber ="";
+  secondNumber= "";
+  operator = undefined;
+  document.getElementById("display").innerHTML = firstNumber;
+  stage = false;
+
+})
+
+//THE END **/
