@@ -5,6 +5,13 @@
     margin: 0px;
     padding: 0px;
 }
+
+#methd{
+    background: rgb(243, 243, 243);
+    text-align: center;
+    min-height: 29px;
+}
+
 h1{
     position: relative;
     top: 50px;
@@ -12,7 +19,7 @@ h1{
 
 header{
     background-color: rgb(59, 122, 194);
-    height: 150px;
+    height: 100px;
     font-family: 'Zen Antique', serif;
     font-size: 20px;
     text-align: center;
@@ -53,7 +60,15 @@ body{
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-div{
+#displayDiv{
+    margin-bottom: 20px;
     height: 100px;
     background-color: white;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(243, 243, 243);
 }

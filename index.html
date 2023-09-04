@@ -11,28 +11,44 @@
 
 <body>
     <header>
-        <h1>Claculator (v0.5)</h1>
+        <h1>Claculator (v1.0)</h1>
     </header>
-    <div>
+    <div id="displayDiv">
         <p id="display"></p>
     </div>
-    <button class="btn numbers" id="one">1</button>
-    <button class="btn numbers" id="two">2</button>
-    <button class="btn numbers" id="three">3</button>
-    <button class="btn numbers" id="four">4</button>
-    <button class="btn numbers" id="five">5</button>
-    <button class="btn numbers" id="six">6</button>
-    <button class="btn numbers" id="seven">7</button>
-    <button class="btn numbers" id="eight">8</button>
-    <button class="btn numbers" id="nine">9</button>
-    <button class="btn numbers" id="zero">0</button>
-    <button class="btn symbols" id="equal">=</button>
-    <button class="btn symbols math" id="plus">+</button>
-    <button class="btn symbols math" id="minus">-</button>
-    <button class="btn symbols math" id="multiply">×</button>
-    <button class="btn symbols math" id="divide">÷</button>
-    <button class="btn symbols math" id="decimal">.</button>
-    <button class="btn symbols math" id="clear">C</button>
+        <p id="methd"></p>
+    <div class="main">
+        <div class="row">
+            <button class="btn numbers" id="one">1</button>
+            <button class="btn numbers" id="two">2</button>
+            <button class="btn numbers" id="three">3</button>
+        </div>
+        <div class="row">
+            <button class="btn numbers" id="four">4</button>
+            <button class="btn numbers" id="five">5</button>
+            <button class="btn numbers" id="six">6</button>
+        </div>
+        <div class="row">
+            <button class="btn numbers" id="seven">7</button>
+            <button class="btn numbers" id="eight">8</button>
+            <button class="btn numbers" id="nine">9</button>
+        </div>
+        <div class="row">
+            <button class="btn numbers" id="zero">0</button>
+            <button class="btn symbols" id="equal">=</button>
+            <button class="btn symbols math" id="plus">+</button>
+        </div>
+        <div class="row">
+            <button class="btn symbols math" id="minus">-</button>
+            <button class="btn symbols math" id="multiply">×</button>
+            <button class="btn symbols math" id="divide">÷</button>
+        </div>
+        <div class="row">
+            <button class="btn symbols math" id="correct">Del</button>
+            <button class="btn symbols math" id="decimal">.</button>
+            <button class="btn symbols math" id="clear">AC</button>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
 

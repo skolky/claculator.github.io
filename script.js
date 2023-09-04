@@ -179,10 +179,12 @@ plus.addEventListener("click", () => {
   if (secondNumber != "") {
     process()
     operator = "plus";
+    methd.innerHTML = "+"
   }
   else{
   stage = true;
   operator = "plus";
+  methd.innerHTML = "+"
   }
 });
 
@@ -191,10 +193,12 @@ minus.addEventListener("click", () => {
   if (secondNumber != "") {
     process()
     operator = "minus";
+    methd.innerHTML = "-"
   }
   else{
   stage = true;
   operator = "minus";
+  methd.innerHTML = "-"
   }
 });
 
@@ -203,10 +207,12 @@ multiply.addEventListener("click", () => {
   if (secondNumber != "") {
     process()
     operator = "multiply";
+    methd.innerHTML = "×"
   }
   else{
   stage = true;
   operator = "multiply";
+  methd.innerHTML = "×"
   }
 });
 
@@ -215,10 +221,12 @@ divide.addEventListener("click", () => {
   if (secondNumber != "") {
     process()
     operator = "divide";
+    methd.innerHTML = "÷"
   }
   else{
   stage = true;
   operator = "divide";
+  methd.innerHTML = "÷"
   }
 });
 
@@ -228,7 +236,19 @@ equal.addEventListener("click", ()=>{
   process();
 });
 
-// Clear Button 
+// Clear and delete Button 
+
+correct.addEventListener("click", () => {
+  if (stage != true){
+    firstNumber = firstNumber.slice(0, -1)
+    document.getElementById("display").innerHTML = firstNumber;
+  }
+  else if (stage === true){
+    secondNumber = secondNumber.slice(0, -1)
+    document.getElementById("display").innerHTML = secondNumber;
+    
+  }
+})
 
 clear.addEventListener("click", () => {
   firstNumber ="";
@@ -236,6 +256,7 @@ clear.addEventListener("click", () => {
   operator = undefined;
   document.getElementById("display").innerHTML = firstNumber;
   stage = false;
+  methd.innerHTML = "";
 
 })
 
