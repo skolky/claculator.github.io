@@ -7,9 +7,10 @@
 }
 
 #methd{
-    background: rgb(243, 243, 243);
+    background: #262525;
     text-align: center;
     min-height: 29px;
+    color: #f0f0f0;
 }
 
 h1{
@@ -18,20 +19,20 @@ h1{
 }
 
 header{
-    background-color: rgb(59, 122, 194);
+    background-color: rgb(130, 139, 149);
     height: 100px;
     font-family: 'Zen Antique', serif;
     font-size: 20px;
     text-align: center;
-    color: rgb(29, 29, 29);
+    color: rgb(0, 0, 0);
 }
 
 body{
-    background: rgb(243, 243, 243);
+    background: #262525;
 }
 
 .numbers{
-    background-color: rgb(255, 217, 0);
+    background-color: rgb(255, 125, 11);
     color: white;
 }
 
@@ -42,10 +43,11 @@ body{
     font-size: 25px;
     margin: 5px;
     position: relative;
+    border-radius: 11px;
 }
 
 .symbols{
-    background-color: rgb(30, 26, 255);
+    background-color: rgb(118, 118, 119);
     color: white;
 }
 
@@ -61,14 +63,35 @@ body{
 }
 
 #displayDiv{
-    margin-bottom: 20px;
+    margin: 20px;
     height: 100px;
-    background-color: white;
+    background-color: #f0f0f0;
+    border-radius: 14px;
+    overflow: auto;
 }
 
 .main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(243, 243, 243);
+    background: #262525;
+    min-height: 100vh;
+}
+
+footer{
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 69px;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+span{
+    margin: 10px;
 }

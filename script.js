@@ -1,4 +1,4 @@
-// Version 0.4.0
+// Version 2.4
 
 let firstNumber="";
 let secondNumber="";
@@ -160,6 +160,7 @@ decimal.addEventListener("click", ()=>{
   if (firstNumber === "") {
     firstNumber = "0.";
     document.getElementById("display").innerHTML = firstNumber;
+    
   } else if (stage != true) {
     firstNumber += ".";
     document.getElementById("display").innerHTML = firstNumber;
@@ -233,7 +234,26 @@ divide.addEventListener("click", () => {
 // Display of Answer
 
 equal.addEventListener("click", ()=>{
-  process();
+  if (firstNumber === "" && secondNumber === ""){
+    firstNumber = "0";
+    secondNumber = "0";
+    process();
+    methd.innerHTML = "=";
+  }
+  else if(firstNumber === ""){
+    firstNumber = "0"
+    process();
+    methd.innerHTML = "=";
+  }
+  else if (secondNumber === ""){
+    secondNumber = firstNumber;
+    process();
+    methd.innerHTML = "=";
+  }
+  else{
+    process();
+    methd.innerHTML = "=";
+  }
 });
 
 // Clear and delete Button 
@@ -259,5 +279,7 @@ clear.addEventListener("click", () => {
   methd.innerHTML = "";
 
 })
+
+
 
 //THE END **/
