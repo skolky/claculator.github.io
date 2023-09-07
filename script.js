@@ -1,7 +1,12 @@
+
+
+
+
+
 // Version 2.4
 
-let firstNumber="";
-let secondNumber="";
+let firstNumber = ""
+let secondNumber = ""
 let stage;
 let operator;
 
@@ -10,33 +15,33 @@ let operator;
 function process() {
     // directions for adding
     if (operator === "plus") {
-      let num1 = parseFloat(firstNumber);
-      let num2 = parseFloat(secondNumber);
-      firstNumber = num1 + num2;
+      let num1 = new Big(firstNumber);
+      let num2 = new Big(secondNumber);
+      firstNumber = num1.plus(num2).toString();
       secondNumber = ""
       document.getElementById("display").innerHTML = firstNumber;
     }
     // directions for subtracting
     else if (operator === "minus") {
-      let num1 = parseFloat(firstNumber);
-      let num2 = parseFloat(secondNumber);
-      firstNumber = num1 - num2;
+      let num1 = new Big(firstNumber);
+      let num2 = new Big(secondNumber);
+      firstNumber = num1.minus(num2).toString();
       secondNumber = ""
       document.getElementById("display").innerHTML = firstNumber;
     }
     // directions for multiplying
     else if (operator === "multiply") {
-      let num1 = parseFloat(firstNumber);
-      let num2 = parseFloat(secondNumber);
-      firstNumber = num1 * num2;
+      let num1 = new Big(firstNumber);
+      let num2 = new Big(secondNumber);
+      firstNumber = num1.times(num2).toString();
       secondNumber = ""
       document.getElementById("display").innerHTML = firstNumber;
     }
     // directions for dividing
     else if (operator === "divide") {
-      let num1 = parseFloat(firstNumber);
-      let num2 = parseFloat(secondNumber);
-      firstNumber = num1 / num2;
+      let num1 = new Big(firstNumber);
+      let num2 = new Big(secondNumber);
+      firstNumber = num1.div(num2).toString();
       secondNumber = ""
       document.getElementById("display").innerHTML = firstNumber;
     }
@@ -157,20 +162,19 @@ zero.addEventListener("click", () => {
 
 // decimal
 decimal.addEventListener("click", ()=>{
-  if (firstNumber === "") {
-    firstNumber = "0.";
-    document.getElementById("display").innerHTML = firstNumber;
-    
-  } else if (stage != true) {
-    firstNumber += ".";
-    document.getElementById("display").innerHTML = firstNumber;
-  } else if (stage === true && secondNumber === "") {
-    secondNumber = "0.";
-    document.getElementById("display").innerHTML = secondNumber;
-  } else if (stage === true) {
-    secondNumber += ".";
-    document.getElementById("display").innerHTML = secondNumber;
-  }
+    if (firstNumber === "" && firstNumber.includes('.') != true && stage != true) {
+      firstNumber = "0.";
+      document.getElementById("display").innerHTML = firstNumber;
+      } else if (stage != true && firstNumber.includes('.') != true ) {
+      firstNumber += ".";
+      document.getElementById("display").innerHTML = firstNumber;
+    } if (stage === true && secondNumber === "" && secondNumber.includes('.') != true) {
+      secondNumber = "0.";
+      document.getElementById("display").innerHTML = secondNumber;
+    } else if (stage === true && secondNumber.includes('.') != true) {
+      secondNumber += ".";
+      document.getElementById("display").innerHTML = secondNumber;
+    }
 });
 
 // Arithmetic Operator
@@ -281,5 +285,6 @@ clear.addEventListener("click", () => {
 })
 
 
-
 //THE END **/
+
+
